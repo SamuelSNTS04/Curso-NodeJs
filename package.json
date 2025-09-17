@@ -1,0 +1,15 @@
+{
+  "name": "curso-nodejs",
+  "version": "1.0.0",
+  "description": "Repositório acadêmico, para a inserção de atividades e conhecimentos do curso.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
