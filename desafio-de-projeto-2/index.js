@@ -2,41 +2,40 @@ let vitorias = 101;
 let derrotas = 0;
 let nivel;
 
-function saldoVitorias(vitorias, derrotas) {
-    const somatorio = vitorias - derrotas;
-    return somatorio;
+function calcularSaldo(vitorias, derrotas) {
+    return vitorias - derrotas;
 }
 
+resultadoDoSaldo = calcularSaldo(vitorias,derrotas);
+
 switch (true) {
-    case saldoVitorias(vitorias, derrotas) < 10:
+    case vitorias <= 10:
         nivel = 'Ferro';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 11 && saldoVitorias(vitorias, derrotas) <= 20:
+    case vitorias >= 11 && vitorias <= 20:
         nivel = 'Bronze';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 21 && saldoVitorias(vitorias, derrotas) <= 50:
+    case vitorias >= 21 && vitorias <= 50:
         nivel = 'Prata';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 51 && saldoVitorias(vitorias, derrotas) <= 80:
+    case vitorias >= 51 && vitorias <= 80:
         nivel = 'Ouro';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 81 && saldoVitorias(vitorias, derrotas) <= 90:
+    case vitorias >= 81 && vitorias <= 90:
         nivel = 'Diamante';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 91 && saldoVitorias(vitorias, derrotas) <= 100:
+    case vitorias >= 91 && vitorias <= 100:
         nivel = 'Lendário';
         break;
 
-    case saldoVitorias(vitorias, derrotas) >= 101:
+    case vitorias >= 101:
         nivel = 'Imortal';
         break;
 }
 
-console.log(`O Herói tem de saldo de ${saldoVitorias(vitorias, derrotas)} está no nível de ${nivel}`);
-
-
+console.log(`O Herói tem de saldo de ${resultadoDoSaldo} está no nível de ${nivel}`);
