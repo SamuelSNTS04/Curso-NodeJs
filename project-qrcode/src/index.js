@@ -1,12 +1,14 @@
 import prompt from "prompt";
-import { mainPrompt } from "./prompts/prompt-main.js";
+import promptSchemaMain from "./prompts-schema/prompt-schema-main.js";
+import createQrCode from "./services/qr-code/create.js";
+import createPasword from "./services/password/create.js";
 
 async function main() {
-    prompt.get(mainPrompt, async (err, result) => {
+    prompt.get(promptSchemaMain, async (err, result) => {
         if (result.select == 1) {
-            console.log("Escolheu o QRCODE")
+            await createQrCode();
         } else if (result.select == 2) {
-            console.log("Escolheu o PASSWORD")
+            await createPasword();
         }
     })
 
